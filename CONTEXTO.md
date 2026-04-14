@@ -57,6 +57,14 @@ Implementação: usa `execFileSync('curl', [...args])` — sem dependências npm
 
 ---
 
+## Repositório
+
+**https://github.com/developermwpt/mcp-local-shell**
+
+Todo o trabalho feito neste projecto é versionado neste repositório. Qualquer alteração a ficheiros deve ser seguida de `git commit` + `git push origin main`. Ver `CLAUDE.md` para o workflow detalhado.
+
+---
+
 ## Histórico de desenvolvimento
 
 | Data | Evento |
@@ -67,6 +75,8 @@ Implementação: usa `execFileSync('curl', [...args])` — sem dependências npm
 | 2026-04-06 | Testado com sucesso — Claude executa comandos reais no Mac (hostname: MacBook-Pro-de-Marcio-2.local) |
 | 2026-04-06 | Plugin Cowork desinstalado (removido de `rpm/manifest.json` e pasta apagada) |
 | 2026-04-06 | v0.2.0 — adicionada tool `http_request` (curl via execFileSync) para pedidos HTTP/HTTPS a partir da máquina local quando URLs não são acessíveis na sandbox |
+| 2026-04-14 | Repositório git criado e publicado em GitHub (`developermwpt/mcp-local-shell`) |
+| 2026-04-14 | Adicionados `README.md` (instalação pública) e `CLAUDE.md` (instruções de workflow para o Claude) |
 
 ---
 
@@ -110,12 +120,14 @@ Para respostas grandes (ex: download de ficheiros), fazer streaming em vez de es
 
 ---
 
-## Estrutura do ficheiro
+## Estrutura do projecto
 
 ```
-/Users/marciomartins/Documents/Local-shell/
-├── shell-server.js   ← servidor MCP (único ficheiro, zero dependências)
-└── CONTEXTO.md       ← este ficheiro
+mcp-local-shell/
+├── shell-server.js     ← servidor MCP (zero dependências)
+├── CLAUDE.md           ← instruções de workflow para o Claude
+├── CONTEXTO.md         ← este ficheiro (contexto técnico e histórico)
+└── README.md           ← documentação pública (instalação, uso)
 ```
 
 ---
